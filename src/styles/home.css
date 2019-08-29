@@ -1,6 +1,6 @@
  @font-face {
   font-family: Bushido;
-  src: url(/fonts/jupan.ttf);
+  src: url(../fonts/jupan.ttf);
 }
 
 .homePage {
@@ -8,7 +8,7 @@
   height: 100%;
   overflow: hidden;
   background-color: rgb(255, 255, 136);
-  background-image: url(/pic/samurai.png);
+  background-image: url(https://github.com/RavenVol/sudoku/blob/master/public/pic/samurai.png?raw=true);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 110px center;
