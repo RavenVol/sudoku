@@ -1,0 +1,129 @@
+.sudoku-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 500px;
+}
+
+.puzzle {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.65);
+
+  transform: rotateY(990deg) scale3d(0.2, 0.2, 0.2);
+
+  animation: sudokuPuzzleMove 1.25s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sudokuPuzzleMove {
+  0% {
+    transform: rotateY(990deg) scale3d(0.2, 0.2, 0.2);
+  }
+  100% {
+    transform: rotateY(0deg) scale3d(1, 1, 1);
+  }
+}
+
+.sudoku {
+  box-sizing: border-box;
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 37px;
+  height: 37px;
+  border: 1px solid grey;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  background: transparent;
+}
+
+.cell:hover {
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.boxBorder-right {
+  border-right: 3px solid #000;
+}
+
+.boxBorder-bottom {
+  border-bottom: 2px solid #000;
+}
+
+.palete {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paleteNumber, .solvedNumber {
+  width: 30px;
+  height: 50px;
+  margin-right: 10px;
+  border: 2px solid #000;
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+  border-radius: 0 20px 0 20px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.paleteNumber:hover {
+  background-color: rgba(95, 158, 160, 0.5);
+  color: white;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.chosen {
+  background-color: rgba(160, 95, 114, 0.3);
+  color: white;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.cellSelected {
+  background-color: rgba(160, 95, 114, 0.3);
+  color: white;
+}
+
+.setBold {
+  font-weight: bold;
+}
+
+.errorCell {
+  background-color: red;
+  color: white;
+}
+
+.sameNumber {
+  color: blue;
+}
+
+.solvedNumber {
+  background-color: transparent;
+  color: lightgray;
+}
+
+

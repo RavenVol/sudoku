@@ -1,0 +1,139 @@
+ @font-face {
+  font-family: Bushido;
+  src: url("/fonts/jupan.ttf");
+}
+
+.homePage {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 136);
+  background-image: url("/pic/samurai.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 110px center;
+  background-clip: border-box;
+  background-size: contain;
+
+  font-family: Bushido;
+}
+
+.curtain {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 136, 1);
+  color: transparent;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "title . menu";
+  justify-items: center;
+  align-items: center;
+
+  animation: curtain 2s linear 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes curtain {
+  0% {
+    background-color: rgba(255, 255, 136, 1);
+    color: transparent;
+  }
+  50% {
+    background-color: rgba(255, 255, 136, 0);
+    color: transparent;
+  }
+  70% {
+    background-color: rgba(255, 255, 136, 0);
+    color: #000;
+  }
+  85% {
+    background-color: rgba(255, 255, 136, 0);
+    color: #b40a0a;
+  }
+  100% {
+    background-color: rgba(255, 255, 136, 0);
+    color: #000;
+  }
+}
+
+
+.title {
+  grid-area: title;
+  justify-self: end;
+  text-align: end;
+}
+
+.gameName {
+  font-size: 100px;
+}
+
+.author {
+  font-size: 15px;
+}
+
+.homeMenu {
+  width: 100%;
+  height: 220px;
+  grid-area: menu;
+  justify-self: start;
+  position: relative;
+}
+
+.homeMenuBtn1,
+.homeMenuBtn2,
+.homeMenuBtn3 {
+  width: 120px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  border-radius: 50px 0 50px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+
+  position: absolute;
+}
+
+.homeMenuBtn1:hover,
+.homeMenuBtn2:hover,
+.homeMenuBtn3:hover {
+  background-color: rgba(95, 158, 160, 0.3);
+}
+
+.homeMenuBtn1 {
+  top: 0px;
+  right: -120px;
+  animation: buttonMove 0.3s linear 2.3s;
+  animation-fill-mode: forwards;
+}
+
+.homeMenuBtn2 {
+  top: 80px;
+  right: -120px;
+  animation: buttonMove 0.3s linear 2.35s;
+  animation-fill-mode: forwards;
+}
+
+.homeMenuBtn3 {
+  top: 160px;
+  right: -120px;
+  animation: buttonMove 0.3s linear 2.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes buttonMove {
+  0% {
+    right: -120px;
+  }
+  80% {
+    right: 90%;
+  }
+  100% {
+    right: 70%;
+  }
+}
+
