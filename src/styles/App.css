@@ -1,6 +1,6 @@
 @font-face {
   font-family: LiberationSerif-Regular;
-  src: url("/fonts/LiberationSerif-Regular.ttf");
+  src: url(/fonts/LiberationSerif-Regular.ttf);
 }
 
 * {
